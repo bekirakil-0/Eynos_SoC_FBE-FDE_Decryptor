@@ -7,5 +7,5 @@ This device tree is incomplete and needs heavy modifications. Interested develop
 
 <p>
 Quack quack
-<text style="color: red">ERROR</text>
+<text color=red>ERROR</text>
 </p>
