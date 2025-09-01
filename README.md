@@ -9,3 +9,5 @@ This device tree is incomplete and needs heavy modifications. Interested develop
 Quack quack
 <text color=red>ERROR</text>
 </p>
+
+[some text](color: red)
