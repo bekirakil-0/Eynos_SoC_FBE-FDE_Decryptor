@@ -66,7 +66,7 @@ on property:vendor.sys.listeners.registered=true && property:keymaster_ver=4.x
 
 on property:ro.crypto.type=block && property:ro.crypto.fs_crypto_blkdev=*
     setprop crypto.ready 0
-    stop qseecomd
+    stop tzdaemon
     stop keymaster-3-0
     stop keymaster-3-0-qti
     stop vendor.keymaster-4-0
