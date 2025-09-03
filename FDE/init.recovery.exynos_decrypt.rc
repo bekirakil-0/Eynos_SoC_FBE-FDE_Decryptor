@@ -3,8 +3,8 @@ import /init.recovery.exynos_decrypt.fbe.rc
 
 on fs
     # 
-    chmod 0660 /dev/tzdaemon
-    chown system drmrpc /dev/tzdaemon
+    chmod 0660 /dev/tzdev
+    chown system drmrpc /dev/tzdev
     chmod 0664 /dev/ion
     chown system system /dev/ion
 
