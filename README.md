@@ -10,7 +10,7 @@ echo "DANGER ZONE!";
 </body>
 </html>
  
-# This device tree needs modifications based on your model. In case of any use and misuse of this script on your TWRP the following applies
+# This device tree needs modifications based on your model. In case of any use AND misuse of this script on your TWRP the following applies
 * Your warranty is now void.
 * I am not responsible for bricked devices, dead SD cards,
  thermonuclear war, or you getting fired because the alarm app failed.
