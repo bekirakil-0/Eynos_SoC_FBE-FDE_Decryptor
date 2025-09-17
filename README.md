@@ -1,4 +1,4 @@
-                                                              ℹ️  <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <body>
 
