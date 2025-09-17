@@ -1,4 +1,4 @@
-#
+#ℹ️
 * Your warranty is now void.
 * I am not responsible for bricked devices, dead SD cards,
  thermonuclear war, or you getting fired because the alarm app failed.
