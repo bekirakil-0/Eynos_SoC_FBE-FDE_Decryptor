@@ -1,10 +1,10 @@
 #
 * Your warranty is now void.
 * I am not responsible for bricked devices, dead SD cards,
-* thermonuclear war, or you getting fired because the alarm app failed. Please
-* do some research if you have any concerns about doing this to your device
+ thermonuclear war, or you getting fired because the alarm app failed.
+* Please do some research if you have any concerns about doing this to your device
 * YOU are choosing to make these modifications, and if
-* you point the finger at me for messing up your device, I will laugh at you.
+ you point the finger at me for messing up your device, I will laugh at you.
 #
 
 # TWRP standart device files for Samsung Exynos SoC (Only TEEgris v4 for now)
