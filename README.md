@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <body>
-                    <h1> style="color:Tomato;DANGER ZONE!!!!!</h1>
-<h1> style="color:Tomato;CAUTION</h1>                
+                    <h1 style="color:Tomato;">DANGER ZONE</h1>
+<h1 style="color:Tomato;">CAUTION</h1>                
 
 <?php
 echo "DANGER ZONE!";
