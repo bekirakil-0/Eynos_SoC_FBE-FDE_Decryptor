@@ -22,59 +22,59 @@ on property:crypto.ready=1 && property:hwservicemanager.ready=true
 
 on property:sys.listeners.registered=true && property:keymaster_ver=3.0
     start keymaster-3-0
-    start keymaster-3-0-qti
+    #start keymaster-3-0-qti
 
 on property:sys.listeners.registered=true && property:keymaster_ver=4.0
     start vendor.keymaster-4-0
-    start keymaster-4-0-qti
+    #start keymaster-4-0-qti
     start vendor.keymaster-4-0_strongbox
 
 on property:sys.listeners.registered=true && property:keymaster_ver=4.1
     start vendor.keymaster-4-1
-    start keymaster-4-1-qti
-    start keymaster-4-1-citadel
+    #start keymaster-4-1-qti
+    #start keymaster-4-1-citadel
     
 on property:sys.listeners.registered=true && property:keymaster_ver=4.x
     start vendor.keymaster-4-0
-    start keymaster-4-0-qti
+    #start keymaster-4-0-qti
     start vendor.keymaster-4-0_strongbox
     start vendor.keymaster-4-1
-    start keymaster-4-1-qti
-    start keymaster-4-1-citadel
+    #start keymaster-4-1-qti
+    #start keymaster-4-1-citadel
 
 on property:vendor.sys.listeners.registered=true && property:keymaster_ver=3.0
     start keymaster-3-0
-    start keymaster-3-0-qti
+    #start keymaster-3-0-qti
 
 on property:vendor.sys.listeners.registered=true && property:keymaster_ver=4.0
     start vendor.keymaster-4-0
-    start keymaster-4-0-qti
+    #start keymaster-4-0-qti
     start vendor.keymaster-4-0_strongbox
 
 on property:vendor.sys.listeners.registered=true && property:keymaster_ver=4.1
     start vendor.keymaster-4-1
-    start keymaster-4-1-qti
-    start keymaster-4-1-citadel
+    #start keymaster-4-1-qti
+    #start keymaster-4-1-citadel
 
 on property:vendor.sys.listeners.registered=true && property:keymaster_ver=4.x
     start vendor.keymaster-4-0
-    start keymaster-4-0-qti
+    #start keymaster-4-0-qti
     start vendor.keymaster-4-0_strongbox
     start vendor.keymaster-4-1
-    start keymaster-4-1-qti
-    start keymaster-4-1-citadel
+    #start keymaster-4-1-qti
+    #start keymaster-4-1-citadel
 
 on property:ro.crypto.type=block && property:ro.crypto.fs_crypto_blkdev=*
     setprop crypto.ready 0
     stop tzdaemon
     stop keymaster-3-0
-    stop keymaster-3-0-qti
+    #stop keymaster-3-0-qti
     stop vendor.keymaster-4-0
-    stop keymaster-4-0-qti
+    #stop keymaster-4-0-qti
     start vendor.keymaster-4-0_strongbox
     stop vendor.keymaster-4-1
-    stop keymaster-4-1-qti
-    stop keymaster-4-1-citadel
+    #stop keymaster-4-1-qti
+    #stop keymaster-4-1-citadel
 
 # For Android 10+ trees, services should be placed in /system/bin in the recovery ramdisk
 # For older trees, the services should be placed in /sbin
@@ -109,13 +109,13 @@ service vendor.keymaster-3-0 /system/bin/android.hardware.keymaster@3.0-service
     oneshot
     seclabel u:r:recovery:s0
 
-service vendor.keymaster-3-0-qti /system/bin/android.hardware.keymaster@3.0-service-qti
-    user root
-    group root
-    setenv LD_LIBRARY_PATH /vendor/lib64:/vendor/lib:/system/lib64:/system/lib:/sbin
-    disabled
-    oneshot
-    seclabel u:r:recovery:s0
+#service vendor.keymaster-3-0-qti /system/bin/android.hardware.keymaster@3.0-service-qti
+    #user root
+    #group root
+    #setenv LD_LIBRARY_PATH /vendor/lib64:/vendor/lib:/system/lib64:/system/lib:/sbin
+    #disabled
+    #oneshot
+    #seclabel u:r:recovery:s0
 
 service vendor.keymaster-4-0 /system/bin/android.hardware.keymaster@4.0-service
     user root
@@ -125,13 +125,13 @@ service vendor.keymaster-4-0 /system/bin/android.hardware.keymaster@4.0-service
     oneshot
     seclabel u:r:recovery:s0
 
-service vendor.keymaster-4-0-qti /system/bin/android.hardware.keymaster@4.0-service-qti
-    user root
-    group root
-    setenv LD_LIBRARY_PATH /vendor/lib64:/vendor/lib:/system/lib64:/system/lib:/sbin
-    disabled
-    oneshot
-    seclabel u:r:recovery:s0
+#service vendor.keymaster-4-0-qti /system/bin/android.hardware.keymaster@4.0-service-qti
+    #user root
+    #group root
+    #setenv LD_LIBRARY_PATH /vendor/lib64:/vendor/lib:/system/lib64:/system/lib:/sbin
+    #disabled
+    #oneshot
+    #seclabel u:r:recovery:s0
 
 service start vendor.keymaster-4-0_strongbox /system/bin/android.hardware.keymaster@4.0-strongbox-service
     user root
@@ -150,17 +150,17 @@ service vendor.keymaster-4-1 /system/bin/android.hardware.keymaster@4.1-service
     oneshot
     seclabel u:r:recovery:s0
 
-service vendor.keymaster-4-1-qti /system/bin/android.hardware.keymaster@4.1-service-qti
-    user root
-    group root
-    setenv LD_LIBRARY_PATH /vendor/lib64:/vendor/lib:/system/lib64:/system/lib:/sbin
-    disabled
-    oneshot
-    seclabel u:r:recovery:s0
+#service vendor.keymaster-4-1-qti /system/bin/android.hardware.keymaster@4.1-service-qti
+    #user root
+    #group root
+    #setenv LD_LIBRARY_PATH /vendor/lib64:/vendor/lib:/system/lib64:/system/lib:/sbin
+    #disabled
+    #oneshot
+    #seclabel u:r:recovery:s0
 
-service vendor.keymaster-4-1-citadel /system/bin/android.hardware.keymaster@4.1-service.citadel
-    disabled
-    user root
-    group root
-    setenv LD_LIBRARY_PATH /vendor/lib64:/vendor/lib:/system/lib64:/system/lib:/sbin
-    seclabel u:r:recovery:s0
+#service vendor.keymaster-4-1-citadel /system/bin/android.hardware.keymaster@4.1-service.citadel
+    #disabled
+    #user root
+    #group root
+    #setenv LD_LIBRARY_PATH /vendor/lib64:/vendor/lib:/system/lib64:/system/lib:/sbin
+    #seclabel u:r:recovery:s0
